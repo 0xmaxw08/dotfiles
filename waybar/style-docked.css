@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    font-family: "Hack Nerd Font", monospace;
+    font-size: 10px;
+    font-weight: 500;
+    min-height: 0;
+}
+
+button {
+    background: none;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+button:hover,
+button:focus,
+button:active {
+    background: none;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    text-shadow: none;
+}
+
+window#waybar {
+    background: #0a0a0a;
+    border: none;
+    border-radius: 0;
+    color: #d4d4d4;
+}
+
+/* workspace group */
+#workspaces {
+    padding: 2px 7px;
+    margin: 3px 1px;
+    background: #161616;
+    border-radius: 8px;
+}
+
+#custom-ws1,
+#custom-ws2,
+#custom-ws3,
+#custom-ws4,
+#custom-ws5 {
+    padding: 1px 7px;
+    margin: 0;
+    background: transparent;
+    color: #4a4a4a;
+}
+
+#custom-ws1.active,
+#custom-ws2.active,
+#custom-ws3.active,
+#custom-ws4.active,
+#custom-ws5.active {
+    background: #e8e8e8;
+    border-radius: 6px;
+    color: #0a0a0a;
+    font-weight: 700;
+}
+
+#custom-ws-extra {
+    padding: 1px 7px;
+    margin: 0;
+    background: #e8e8e8;
+    border-radius: 6px;
+    color: #0a0a0a;
+    font-weight: 700;
+}
+
+/* window title pill */
+#window {
+    padding: 2px 10px;
+    margin: 3px 3px 3px 1px;
+    background: #161616;
+    border-radius: 8px;
+    color: #8a8a8a;
+    font-style: italic;
+}
+
+/* mpris pill */
+#mpris {
+    padding: 2px 9px;
+    margin: 3px;
+    background: #161616;
+    border-radius: 8px;
+    color: #9a9a9a;
+}
+
+#mpris.paused {
+    color: #4a4a4a;
+}
+
+/* clock pill */
+#clock {
+    padding: 2px 11px;
+    margin: 3px;
+    background: #161616;
+    border-radius: 8px;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* right-side pills */
+#custom-fan,
+#custom-wallpaper,
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#temperature,
+#battery {
+    padding: 1px 7px;
+    margin: 3px 1px;
+    background: #161616;
+    border-radius: 8px;
+    color: #c4c4c4;
+}
+
+#custom-fan:hover,
+#custom-wallpaper:hover,
+#pulseaudio:hover,
+#network:hover,
+#cpu:hover,
+#memory:hover,
+#battery:hover {
+    background: #1f1f1f;
+    color: #ffffff;
+}
+
+#custom-fan.curve {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+#custom-fan.max {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+#temperature.critical,
+#battery.critical:not(.charging) {
+    background: #e8e8e8;
+    color: #0a0a0a;
+    font-weight: 700;
+}
+
+#battery.warning:not(.charging) {
+    background: #2a2a2a;
+    color: #ffffff;
+}
+
+/* tray pill */
+#tray-group {
+    margin: 3px 3px 3px 1px;
+}
+
+#custom-tray-toggle {
+    padding: 2px 9px;
+    background: #161616;
+    border-radius: 8px;
+    color: #6e6e6e;
+}
+
+#custom-tray-toggle:hover {
+    background: #1f1f1f;
+    color: #ffffff;
+}
+
+#tray {
+    padding: 1px 7px;
+    margin-left: 3px;
+    background: #161616;
+    border-radius: 8px;
+}
+
+#tray > widget {
+    padding: 0 5px;
+}
+
+#tray menu {
+    background: #161616;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    color: #d4d4d4;
+}
+
+tooltip {
+    background: #0a0a0a;
+    border: 1px solid #232323;
+    border-radius: 12px;
+    color: #d4d4d4;
+    padding: 12px 16px;
+}
+
+tooltip label {
+    padding: 0;
+}

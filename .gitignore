@@ -1,20 +1,18 @@
-# Ignore everything by default
 *
 
-# Allow the .gitignore file itself
 !.gitignore
 
-# Whitelist your Hyprland environment tools
 !hypr/
 !waybar/
 !wofi/
 !kitty/
-!bash/
-!vim/
 
-# Explicitly ignore any auto-generated logs, sockets, or caches inside them
+!hypr/**
+!waybar/**
+!wofi/**
+!kitty/**
+
 **/*.log
-**/*.tmp
 **/cache/
 **/.cache/
 

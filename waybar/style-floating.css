@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    font-family: "Hack Nerd Font", monospace;
+    font-size: 10px;
+    font-weight: 500;
+    min-height: 0;
+}
+
+button {
+    background: none;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+button:hover,
+button:focus,
+button:active {
+    background: none;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    text-shadow: none;
+}
+
+window#waybar {
+    background: transparent;
+    color: #ffffff;
+}
+
+#workspaces {
+    padding: 3px 8px;
+    margin: 3px 1px;
+    background: #2b3230;
+    border-radius: 8px;
+}
+
+#custom-ws1, #custom-ws2, #custom-ws3, #custom-ws4, #custom-ws5 {
+    padding: 2px 8px;
+    margin: 0;
+    background: transparent;
+    color: #e8f2ed;
+}
+
+#custom-ws1.active, #custom-ws2.active, #custom-ws3.active, #custom-ws4.active, #custom-ws5.active {
+    background: #b2ffea;
+    border-radius: 6px;
+    color: #000000;
+    font-weight: 700;
+}
+
+#custom-ws-extra {
+    padding: 2px 8px;
+    margin: 0;
+    background: #b2ffea;
+    border-radius: 6px;
+    color: #000000;
+    font-weight: 700;
+}
+
+#window {
+    padding: 2px 10px;
+    margin: 3px 3px 3px 1px;
+    background: #2b3230;
+    border-radius: 8px;
+    color: #e8f2ed;
+    font-style: italic;
+}
+
+#mpris {
+    padding: 2px 9px;
+    margin: 3px;
+    background: #2b3230;
+    border-radius: 8px;
+    color: #ffffff;
+}
+
+#mpris.paused {
+    color: #e8f2ed;
+}
+
+#clock {
+    padding: 2px 11px;
+    margin: 3px;
+    background: #2b3230;
+    border-radius: 8px;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+#custom-fan, #custom-wallpaper, #pulseaudio, #network, #cpu, #memory, #temperature, #battery {
+    padding: 2px 10px;
+    margin: 3px 1px;
+    background: #2b3230;
+    border-radius: 8px;
+    color: #ffffff;
+}
+
+#custom-fan:hover, #custom-wallpaper:hover, #pulseaudio:hover, #network:hover, #cpu:hover, #memory:hover, #battery:hover {
+    background: #363d3a;
+    color: #ffffff;
+}
+
+#temperature.critical, #battery.critical:not(.charging) {
+    background: #ffece9;
+    color: #000000;
+    font-weight: 700;
+}
+
+#battery.warning:not(.charging) {
+    background: #363d3a;
+    color: #ffffff;
+}
+
+#tray-group {
+    margin: 3px 3px 3px 1px;
+}
+
+#custom-tray-toggle {
+    padding: 2px 9px;
+    background: #2b3230;
+    border-radius: 8px;
+    color: #e8f2ed;
+}
+
+#custom-tray-toggle:hover {
+    background: #363d3a;
+    color: #ffffff;
+}
+
+#tray {
+    padding: 2px 8px;
+    margin-left: 3px;
+    background: #2b3230;
+    border-radius: 8px;
+}
+
+#tray > widget {
+    padding: 0 5px;
+}
+
+#tray menu {
+    background: #2b3230;
+    border: 1px solid #bbc5c0;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+tooltip {
+    background: #0e1513;
+    border: 1px solid #bbc5c0;
+    border-radius: 12px;
+    color: #ffffff;
+    padding: 12px 16px;
+}
+
+tooltip label {
+    padding: 0;
+}
