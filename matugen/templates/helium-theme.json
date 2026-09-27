@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Matugen Dynamic Helium Theme",
+  "version": "1.0",
+  "theme": {
+    "colors": {
+      "frame": "{{colors.surface_container_low.hex}}",
+      "frame_inactive": "{{colors.surface_dim.hex}}",
+      "toolbar": "{{colors.surface.hex}}",
+      "tab_text": "{{colors.on_surface.hex}}",
+      "tab_background_text": "{{colors.on_surface_variant.hex}}",
+      "toolbar_text": "{{colors.on_surface.hex}}",
+      "bookmark_text": "{{colors.on_surface.hex}}",
+      "ntp_background": "{{colors.surface.hex}}",
+      "ntp_text": "{{colors.on_surface.hex}}",
+      "button_background": "{{colors.primary_container.hex}}",
+      "accent_color": "{{colors.primary.hex}}"
+    }
+  }
+}
+

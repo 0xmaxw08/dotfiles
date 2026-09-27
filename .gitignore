@@ -6,11 +6,17 @@
 !waybar/
 !wofi/
 !kitty/
+!matugen/
+!mako/
+!kitty/
 
 !hypr/**
 !waybar/**
 !wofi/**
 !kitty/**
+!matugen/**
+!mako/**
+!/kitty/**
 
 **/*.log
 **/cache/

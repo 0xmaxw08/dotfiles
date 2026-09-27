@@ -1,0 +1,26 @@
+background-color=#424846
+text-color=#ffffff
+
+border-size=1
+border-color=#a0f2dd
+border-radius=16
+
+width=400
+height=110
+
+padding=14
+margin=14
+
+font=Hack Nerd Font 10
+markup=true
+format=<b>%s</b>\n%b
+
+icons=true
+max-icon-size=48
+
+default-timeout=5000
+
+[urgency=high]
+background-color=#ffaea4
+border-color=#ffece9
+text-color=#000000

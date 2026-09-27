@@ -1,0 +1,2 @@
+$active_border = rgb({{colors.primary.dark.hex_stripped}})
+$inactive_border = rgb({{colors.outline.dark.hex_stripped}})
