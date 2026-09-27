@@ -5,7 +5,7 @@
 
 window {
     background: #0a0a0a;
-    border: 1px solid #bbc5c0;
+    border: 1px solid #c5c3b3;
     border-radius: 14px;
 }
 
@@ -26,7 +26,7 @@ window {
 }
 
 #input image {
-    color: #e8f2ed;
+    color: #f3f1df;
 }
 
 #inner-box {

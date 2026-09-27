@@ -36,4 +36,4 @@ awww img "$NEXT_WALL" \
 echo "$NEXT_WALL" > "$STATE_FILE"
 
 # Regenerate waybar theme to match new wallpaper
-matugen image "$NEXT_WALL" --source-color-index 0 --mode dark --contrast 1 --config ~/.config/matugen/config.toml >/dev/null 2>&1
+matugen image "$(cat /tmp/current_wallpaper)" --source-color-index 0 --mode dark --contrast 1 --show-colors --config ~/.config/matugen/config.toml >/dev/null 2>&1

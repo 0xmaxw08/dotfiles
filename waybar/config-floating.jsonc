@@ -9,7 +9,15 @@
 
     "modules-left": ["group/workspaces", "hyprland/window"],
     "modules-center": ["mpris", "clock"],
-    "modules-right": ["custom/wallpaper", "custom/fan", "pulseaudio", "network", "cpu", "memory", "temperature", "battery", "group/tray-group"],
+    "modules-right": ["custom/updates", "custom/wallpaper", "custom/fan", "pulseaudio", "network", "cpu", "memory", "temperature", "battery", "group/tray-group"],
+
+    "custom/updates": {
+        "exec": "~/.config/waybar/updates.sh",
+        "return-type": "json",
+        "interval": 1800,
+        "on-click": "kitty -e bash -c 'sudo pacman -Syu; yay -Syu; read'",
+        "signal": 10
+    },
 
     "custom/fan": {
     "exec": "~/.config/waybar/fan-status.sh",
@@ -86,19 +94,27 @@
 
     "mpris": {
         "format": "{player_icon} {title} — {artist}",
-        "format-paused": "{player_icon} {title} — {artist}",
+        "format-paused": "▶ {title} — {artist}",
+
         "player-icons": {
-            "default": "▶",
-            "chromium": "▶"
-        },
-        "paused-icons": {
-            "default": "⏸"
-        },
-        "max-length": 36,
-        "on-click": "playerctl play-pause",
-        "on-scroll-up": "playerctl next",
-        "on-scroll-down": "playerctl previous"
+            "default": "⏸",
+            "chromium": "⏸",
+            "helium": "⏸"
     },
+
+        "paused-icons": {
+            "default": "▶",
+            "chromium": "▶",
+            "helium": "▶"
+    },
+
+    "max-length": 36,
+
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
+    },
+
 
     "custom/wallpaper": {
         "format": "🖼",

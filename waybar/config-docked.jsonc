@@ -9,7 +9,15 @@
 
     "modules-left": ["group/workspaces", "hyprland/window"],
     "modules-center": ["mpris", "clock"],
-    "modules-right": ["custom/wallpaper", "custom/fan", "pulseaudio", "network", "cpu", "memory", "temperature", "battery", "group/tray-group"],
+    "modules-right": ["custom/updates", "custom/wallpaper", "custom/fan", "pulseaudio", "network", "cpu", "memory", "temperature", "battery", "group/tray-group"],
+    
+    "custom/updates": {
+    "exec": "~/.config/waybar/updates.sh",
+    "return-type": "json",
+    "interval": 1800,
+    "on-click": "kitty -e bash -c 'sudo pacman -Syu; yay -Syu; read'",
+    "signal": 10
+},
 
     "group/workspaces": {
         "orientation": "horizontal",
@@ -77,13 +85,13 @@
 
     "mpris": {
         "format": "{player_icon} {title} — {artist}",
-        "format-paused": "{player_icon} {title} — {artist}",
+        "format-paused": "▶ {title} — {artist}",
         "player-icons": {
             "default": "▶",
             "chromium": "▶"
         },
         "paused-icons": {
-            "default": "⏸"
+            "default": "▶"
         },
         "max-length": 36,
         "on-click": "playerctl play-pause",

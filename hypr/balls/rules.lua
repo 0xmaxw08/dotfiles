@@ -64,14 +64,6 @@ hl.on("workspace.active", function(event_data)
     hl.exec_cmd("pkill -RTMIN+8 waybar")
 end)
 
-hl.layer_rule({
-    name  = "wofi-blur-fix",
-    match = { namespace = "wofi" },
-    blur  = false,
-    xray  = true,
-})
-
-
 hl.window_rule({
     name  = "screensaver-fullscreen",
     match = { class = "^(org.hypr.screensaver)$" },
@@ -83,3 +75,12 @@ hl.window_rule({
     match = { class = "^(org.hypr.screensaver)$" },
     float = true,
 })
+
+hl.layer_rule({
+    name        = "wofi-blur-fix",
+    match       = { namespace = "wofi" },
+    blur        = false,
+    xray        = true,
+    ignore_alpha = 0,  
+})
+

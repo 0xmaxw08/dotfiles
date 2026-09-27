@@ -201,3 +201,25 @@ tooltip {
 tooltip label {
     padding: 0;
 }
+
+#custom-updates {
+    padding: 1px 7px;
+    margin: 3px 1px;
+    background: #161616;
+    border-radius: 8px;
+    color: #c4c4c4;
+}
+
+#custom-updates:hover {
+    background: #1f1f1f;
+    color: #ffffff;
+}
+
+#custom-updates.pending {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+#custom-updates.clean {
+    color: #6e6e6e;
+}

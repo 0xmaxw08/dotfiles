@@ -1,7 +1,7 @@
 -- Variables
 
 local Mod = "SUPER"
-local menu = "wofi --show drun"
+local menu = "/home/max/.local/bin/wofi-search"
 local term = "kitty"
 local bar = "waybar"
 local file = "dolphin"
@@ -11,8 +11,8 @@ hl.bind(Mod .. " + J", hl.dsp.layout("togglesplit"))
 hl.bind(Mod .. " + M", hl.dsp.exec_cmd("/home/max/.local/bin/wofi-power.sh"))  
 hl.bind(Mod .. " + G", hl.dsp.exec_cmd("~/.config/hypr/fan-toggle.sh"))
 hl.bind(Mod .. " + Space", hl.dsp.exec_cmd(menu))
-hl.bind(Mod .. " + Return", hl.dsp.exec_cmd(term))
-hl.bind(Mod .. " + Q", hl.dsp.window.close())
+hl.bind(Mod .. " + Return", hl.dsp.exec_cmd(term), { repeating = true })
+hl.bind(Mod .. " + Q", hl.dsp.window.close(), {repeating = true})
 hl.bind(Mod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
 hl.bind(
     Mod .. " + SHIFT + F", 
