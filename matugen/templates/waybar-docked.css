@@ -28,13 +28,13 @@ button:active {
 
 window#waybar {
     background: transparent;
-    color: #ffffff;
+    color: {{colors.on_surface.dark.hex}};
 }
 
 #workspaces {
     padding: 3px 8px;
     margin: 3px 1px;
-    background: #2b3230;
+    background: {{colors.surface_container.dark.hex}};
     border-radius: 8px;
 }
 
@@ -42,52 +42,52 @@ window#waybar {
     padding: 2px 8px;
     margin: 0;
     background: transparent;
-    color: #e8f2ed;
+    color: {{colors.outline.dark.hex}};
 }
 
 #custom-ws1.active, #custom-ws2.active, #custom-ws3.active, #custom-ws4.active, #custom-ws5.active {
-    background: #b2ffea;
+    background: {{colors.primary.dark.hex}};
     border-radius: 6px;
-    color: #000000;
+    color: {{colors.on_primary.dark.hex}};
     font-weight: 700;
 }
 
 #custom-ws-extra {
     padding: 2px 8px;
     margin: 0;
-    background: #b2ffea;
+    background: {{colors.primary.dark.hex}};
     border-radius: 6px;
-    color: #000000;
+    color: {{colors.on_primary.dark.hex}};
     font-weight: 700;
 }
 
 #window {
     padding: 2px 10px;
     margin: 3px 3px 3px 1px;
-    background: #2b3230;
+    background: {{colors.surface_container.dark.hex}};
     border-radius: 8px;
-    color: #e8f2ed;
+    color: {{colors.outline.dark.hex}};
     font-style: italic;
 }
 
 #mpris {
     padding: 2px 9px;
     margin: 3px;
-    background: #2b3230;
+    background: {{colors.surface_container.dark.hex}};
     border-radius: 8px;
-    color: #ffffff;
+    color: {{colors.on_surface_variant.dark.hex}};
 }
 
 #mpris.paused {
-    color: #e8f2ed;
+    color: {{colors.outline.dark.hex}};
 }
 
 #clock {
     padding: 2px 11px;
     margin: 3px;
-    background: #2b3230;
+    background: {{colors.surface_container.dark.hex}};
     border-radius: 8px;
-    color: #ffffff;
+    color: {{colors.on_surface.dark.hex}};
     font-weight: 700;
     letter-spacing: 0.5px;
 }
@@ -95,25 +95,25 @@ window#waybar {
 #custom-fan, #custom-wallpaper, #pulseaudio, #network, #cpu, #memory, #temperature, #battery {
     padding: 2px 10px;
     margin: 3px 1px;
-    background: #2b3230;
+    background: {{colors.surface_container.dark.hex}};
     border-radius: 8px;
-    color: #ffffff;
+    color: {{colors.on_surface_variant.dark.hex}};
 }
 
 #custom-fan:hover, #custom-wallpaper:hover, #pulseaudio:hover, #network:hover, #cpu:hover, #memory:hover, #battery:hover {
-    background: #363d3a;
-    color: #ffffff;
+    background: {{colors.surface_container_high.dark.hex}};
+    color: {{colors.on_surface.dark.hex}};
 }
 
 #temperature.critical, #battery.critical:not(.charging) {
-    background: #ffece9;
-    color: #000000;
+    background: {{colors.error.dark.hex}};
+    color: {{colors.on_error.dark.hex}};
     font-weight: 700;
 }
 
 #battery.warning:not(.charging) {
-    background: #363d3a;
-    color: #ffffff;
+    background: {{colors.surface_container_high.dark.hex}};
+    color: {{colors.on_surface.dark.hex}};
 }
 
 #tray-group {
@@ -122,20 +122,20 @@ window#waybar {
 
 #custom-tray-toggle {
     padding: 2px 9px;
-    background: #2b3230;
+    background: {{colors.surface_container.dark.hex}};
     border-radius: 8px;
-    color: #e8f2ed;
+    color: {{colors.outline.dark.hex}};
 }
 
 #custom-tray-toggle:hover {
-    background: #363d3a;
-    color: #ffffff;
+    background: {{colors.surface_container_high.dark.hex}};
+    color: {{colors.on_surface.dark.hex}};
 }
 
 #tray {
     padding: 2px 8px;
     margin-left: 3px;
-    background: #2b3230;
+    background: {{colors.surface_container.dark.hex}};
     border-radius: 8px;
 }
 
@@ -144,17 +144,17 @@ window#waybar {
 }
 
 #tray menu {
-    background: #2b3230;
-    border: 1px solid #bbc5c0;
+    background: {{colors.surface_container.dark.hex}};
+    border: 1px solid {{colors.outline_variant.dark.hex}};
     border-radius: 10px;
-    color: #ffffff;
+    color: {{colors.on_surface.dark.hex}};
 }
 
 tooltip {
-    background: #0e1513;
-    border: 1px solid #bbc5c0;
+    background: {{colors.surface.dark.hex}};
+    border: 1px solid {{colors.outline_variant.dark.hex}};
     border-radius: 12px;
-    color: #ffffff;
+    color: {{colors.on_surface.dark.hex}};
     padding: 12px 16px;
 }
 
@@ -165,21 +165,21 @@ tooltip label {
 #custom-updates {
     padding: 2px 10px;
     margin: 3px 1px;
-    background: #2b3230;
+    background: {{colors.surface_container.dark.hex}};
     border-radius: 8px;
-    color: #ffffff;
+    color: {{colors.on_surface_variant.dark.hex}};
 }
 
 #custom-updates:hover {
-    background: #363d3a;
-    color: #ffffff;
+    background: {{colors.surface_container_high.dark.hex}};
+    color: {{colors.on_surface.dark.hex}};
 }
 
 #custom-updates.pending {
-    color: #ffffff;
+    color: {{colors.on_surface.dark.hex}};
     font-weight: 700;
 }
 
 #custom-updates.clean {
-    color: #e8f2ed;
+    color: {{colors.outline.dark.hex}};
 }

@@ -5,9 +5,7 @@ layer=overlay
 
 show=drun
 prompt=Search
-matching=contains
-sort_order=default
-filter_rate=20
+matching=fuzzy
 insensitive=true
 no_actions=true
 hide_scroll=true

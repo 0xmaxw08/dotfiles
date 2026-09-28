@@ -1,4 +1,5 @@
 -- Applications
+
 hl.window_rule({
     name  = "spotify-workspace",
     match = { class = "^(Spotify)$" },
@@ -51,7 +52,7 @@ hl.layer_rule({
     name  = "waybar-blur-fix",
     match = { namespace = "waybar" },
     blur  = false,
-    xray  = true,
+    xray  = false,
 })
 
 hl.config({

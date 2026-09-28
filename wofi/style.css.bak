@@ -1,0 +1,76 @@
+* {
+    font-family: "Hack Nerd Font", monospace;
+    font-size: 13px;
+}
+
+window {
+    background: #0a0a0a;
+    border: 1px solid #2a2a2a;
+    border-radius: 0;
+}
+
+#outer-box {
+    margin: 0;
+    background: transparent;
+}
+
+#input {
+    margin: 0;
+    padding: 12px 16px;
+    background: #111111;
+    color: #ffffff;
+    border: none;
+    border-bottom: 1px solid #2a2a2a;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+}
+
+#input:focus {
+    border-bottom: 1px solid #4a9eff;
+}
+
+#input image {
+    color: #6b6b7a;
+}
+
+#inner-box {
+    margin: 6px;
+    background: transparent;
+}
+
+#scroll {
+    margin: 0;
+}
+
+#entry {
+    padding: 8px 10px;
+    margin: 1px 0;
+    background: transparent;
+    border-radius: 0;
+    border-left: 3px solid transparent;
+}
+
+#entry:hover {
+    background: #141414;
+}
+
+#entry:selected {
+    background: rgba(74, 158, 255, 0.14);
+    border-left: 3px solid #4a9eff;
+    outline: none;
+}
+
+#text {
+    color: #b8b8c4;
+    margin-left: 10px;
+}
+
+#entry:selected #text {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+#img {
+    margin-right: 4px;
+}

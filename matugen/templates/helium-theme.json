@@ -4,17 +4,17 @@
   "version": "1.0",
   "theme": {
     "colors": {
-      "frame": "{{colors.surface_container_low.hex}}",
-      "frame_inactive": "{{colors.surface_dim.hex}}",
-      "toolbar": "{{colors.surface.hex}}",
-      "tab_text": "{{colors.on_surface.hex}}",
-      "tab_background_text": "{{colors.on_surface_variant.hex}}",
-      "toolbar_text": "{{colors.on_surface.hex}}",
-      "bookmark_text": "{{colors.on_surface.hex}}",
-      "ntp_background": "{{colors.surface.hex}}",
-      "ntp_text": "{{colors.on_surface.hex}}",
-      "button_background": "{{colors.primary_container.hex}}",
-      "accent_color": "{{colors.primary.hex}}"
+      "frame": "{{colors.surface_container_low.dark.hex}}",
+      "frame_inactive": "{{colors.surface_dim.dark.hex}}",
+      "toolbar": "{{colors.surface.dark.hex}}",
+      "tab_text": "{{colors.on_surface.dark.hex}}",
+      "tab_background_text": "{{colors.on_surface_variant.dark.hex}}",
+      "toolbar_text": "{{colors.on_surface.dark.hex}}",
+      "bookmark_text": "{{colors.on_surface.dark.hex}}",
+      "ntp_background": "{{colors.surface.dark.hex}}",
+      "ntp_text": "{{colors.on_surface.dark.hex}}",
+      "button_background": "{{colors.primary_container.dark.hex}}",
+      "accent_color": "{{colors.primary.dark.hex}}"
     }
   }
 }

@@ -10,14 +10,14 @@
     "modules-left": ["group/workspaces", "hyprland/window"],
     "modules-center": ["mpris", "clock"],
     "modules-right": ["custom/updates", "custom/wallpaper", "custom/fan", "pulseaudio", "network", "cpu", "memory", "temperature", "battery", "group/tray-group"],
-
+    
     "custom/updates": {
-        "exec": "~/.config/waybar/updates.sh",
-        "return-type": "json",
-        "interval": 1800,
-        "on-click": "kitty -e bash -c 'sudo pacman -Syu; yay -Syu; read'",
-        "signal": 10
-    },
+    "exec": "~/.config/waybar/updates.sh",
+    "return-type": "json",
+    "interval": 1800,
+    "on-click": "kitty -e bash -c 'sudo pacman -Syu; yay -Syu; read'",
+    "signal": 10
+},
 
     "group/workspaces": {
         "orientation": "horizontal",
@@ -72,9 +72,10 @@
     },
 
     "hyprland/window": {
-        "format": "\uf2d0  {}",
+        "format": "{}",
         "separate-outputs": true
     },
+
 
     "clock": {
         "format": "{:%H:%M}",
@@ -83,11 +84,14 @@
     },
 
     "mpris": {
-        "format": "{status_icon} {title} — {artist}",
-        "format-paused": "{status_icon} {title} — {artist}",
-        "status-icons": {
-            "playing": "\uf04b",
-            "paused": "\uf04c"
+        "format": "{player_icon} {title} — {artist}",
+        "format-paused": "▶ {title} — {artist}",
+        "player-icons": {
+            "default": "▶",
+            "chromium": "▶"
+        },
+        "paused-icons": {
+            "default": "▶"
         },
         "max-length": 36,
         "on-click": "playerctl play-pause",
@@ -96,7 +100,7 @@
     },
 
     "custom/wallpaper": {
-        "format": "\uf03e",
+        "format": "🖼",
         "on-click": "~/.config/waybar/wallpaper.sh",
         "tooltip": true,
         "tooltip-format": "Click to change wallpaper"
@@ -110,36 +114,35 @@
     },
 
     "cpu": {
-        "format": " {usage}%",
+        "format": " {usage}%",
         "interval": 2,
         "on-click": "kitty -e btop"
     },
 
     "memory": {
-        "format": "\uf538  {percentage}%",
+        "format": " {percentage}%",
         "interval": 2,
         "tooltip-format": "{used:0.1f}G / {total:0.1f}G"
     },
 
     "temperature": {
         "critical-threshold": 80,
-        "format": "{icon} {temperatureC}°C",
-        "format-icons": ["\uf2cb", "\uf2c9", "\uf2c7"]
+        "format": " {temperatureC}°C"
     },
 
     "network": {
-        "format-wifi": "\uf1eb  {signalStrength}%",
-        "format-ethernet": "\uf6ff  {ipaddr}",
-        "format-disconnected": "\uf071  OFFLINE",
+        "format-wifi": " {signalStrength}%",
+        "format-ethernet": " {ipaddr}",
+        "format-disconnected": " OFFLINE",
         "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
         "on-click": "nm-connection-editor"
     },
 
     "pulseaudio": {
         "format": "{icon} {volume}%",
-        "format-muted": "\uf6a9  MUTE",
+        "format-muted": " MUTE",
         "format-icons": {
-            "default": ["\uf026", "\uf027", "\uf028"]
+            "default": ["", "", ""]
         },
         "on-click": "pavucontrol",
         "scroll-step": 5
@@ -147,10 +150,9 @@
 
     "battery": {
         "states": { "warning": 30, "critical": 15 },
-        "format": "{icon} {capacity}%",
-        "format-charging": "\uf0e7 {capacity}%",
-        "format-plugged": "\uf1e6 {capacity}%",
-        "format-icons": ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"]
+        "format": "󰚦 {capacity}%",
+        "format-charging": "󱐥 {capacity}%",
+        "format-plugged": "󱐥 {capacity}%"
     },
 
     "group/tray-group": {
@@ -165,7 +167,7 @@
     },
 
     "custom/tray-toggle": {
-        "format": "\uf0d7",
+        "format": "▾",
         "tooltip": false
     },
 

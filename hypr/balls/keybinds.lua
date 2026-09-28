@@ -8,6 +8,8 @@ local file = "dolphin"
 
 -- Binds
 hl.bind(Mod .. " + J", hl.dsp.layout("togglesplit"))
+-- Trigger hyprlock when the laptop lid switch turns ON
+hl.bind("switch:on:Lid Switch", hl.dsp.exec_cmd("hyprlock"), { locked = true })
 hl.bind(Mod .. " + M", hl.dsp.exec_cmd("/home/max/.local/bin/wofi-power.sh"))  
 hl.bind(Mod .. " + G", hl.dsp.exec_cmd("~/.config/hypr/fan-toggle.sh"))
 hl.bind(Mod .. " + Space", hl.dsp.exec_cmd(menu))
@@ -24,12 +26,12 @@ hl.bind(Mod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 
 -- Utilities
 
+hl.bind(Mod .." + SHIFT + L", hl.dsp.exec_cmd("~/.config/waybar/wallpaper.sh"))
 hl.bind(Mod .. " + B", hl.dsp.exec_cmd("~/.config/waybar/toggle.sh"))
 hl.bind(Mod .. " + SHIFT + B", hl.dsp.exec_cmd("killall waybar"))
 hl.bind(Mod .. " + V", hl.dsp.exec_cmd("cliphist list | wofi --dmenu | cliphist decode | wl-copy"))
 hl.bind(Mod .. " + E", hl.dsp.exec_cmd(file))
 hl.bind(Mod .. " + grave", hl.dsp.exec_cmd('sh -c "wofi --show run --term=kitty"'))
-hl.bind(Mod .. " + SHIFT + L", hl.dsp.exec_cmd("~/.local/bin/screensaver.sh"))
 hl.bind(Mod .. " + SHIFT + Z", hl.dsp.exec_cmd("~/.local/bin/screensaver.sh"))
 hl.bind(Mod .. " + SHIFT + Z", hl.dsp.exec_cmd("~/.local/bin/launch-screensaver.sh"))
 hl.bind(Mod .. " + SHIFT + P", hl.dsp.exec_cmd("~/.config/hypr/gaps-toggle.sh"))

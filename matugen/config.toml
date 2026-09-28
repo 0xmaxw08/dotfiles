@@ -1,13 +1,13 @@
 [config]
 reload_apps = true
 
+[templates.waybar-docked]
+input_path = '~/.config/matugen/templates/waybar-docked.css'
+output_path = '~/.config/waybar/style-docked.css'
+
 [templates.waybar-floating]
 input_path = '~/.config/matugen/templates/waybar-floating.css'
 output_path = '~/.config/waybar/style-floating.css'
-
-[templates.wofi]
-input_path = '~/.config/matugen/templates/wofi-colors.css'
-output_path = '~/.config/wofi/style.css'
 
 [templates.kitty]
 input_path = '~/.config/matugen/templates/kitty-colors.conf'
@@ -21,7 +21,6 @@ output_path = '~/.config/mako/config'
 input_path = '~/.config/matugen/templates/hyprland-colors.conf'
 output_path = '~/.config/hypr/colors.conf'
 
-post_hook = "~/.config/waybar/toggle.sh & sleep 0.5 && ~/.config/waybar/toggle.sh & makoctl reload & ~/.local/bin/apply-hypr-colors.sh &"
 
 [templates.fastfetch]
 input_path = '~/.config/matugen/templates/fastfetch.jsonc'
@@ -30,4 +29,8 @@ output_path = '~/.config/fastfetch/config.jsonc'
 [templates.helium]
 input_path = '~/.config/matugen/templates/helium-theme.json'
 output_path = '~/.config/matugen/helium-dynamic-theme/manifest.json'
+
+[templates.wofi]
+input_path = '~/.config/matugen/templates/wofi.css'
+output_path = '~/.config/wofi/style.css'
 

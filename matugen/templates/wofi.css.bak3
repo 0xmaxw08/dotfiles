@@ -1,0 +1,98 @@
+@define-color bg        {{colors.surface.dark.hex}};
+@define-color fg        {{colors.on_surface.dark.hex}};
+@define-color accent    {{colors.primary.dark.hex}};
+@define-color on_accent {{colors.on_primary.dark.hex}};
+
+@define-color bg_alt    mix(@bg, @fg, 0.05);
+@define-color card      mix(@bg, @fg, 0.07);
+@define-color card_hi   mix(@bg, @fg, 0.13);
+@define-color border    mix(@bg, @fg, 0.14);
+@define-color border_hi mix(@bg, @fg, 0.28);
+@define-color fg_dim    mix(@bg, @fg, 0.75);
+
+* {
+    font-family: "Hack Nerd Font", monospace;
+    font-size: 12px;
+    outline: none;
+}
+
+window {
+    background: @bg;
+    border: 1px solid @border_hi;
+    border-radius: 0;
+}
+
+#outer-box, #inner-box, #scroll {
+    border: none;
+    box-shadow: none;
+    background: transparent;
+}
+
+#outer-box { padding: 4px; }
+#inner-box { margin: 3px 0 0 0; }
+#scroll    { margin: 0; }
+
+/* search bar: inset field */
+#input {
+    margin: 0;
+    padding: 5px 10px;
+    min-height: 0;
+    background: @bg_alt;
+    color: @fg;
+    caret-color: @accent;
+    border: 1px solid @border;
+    border-radius: 6px;
+    box-shadow: inset 0 1px 3px alpha(black, 0.4);
+}
+
+#input:focus {
+    border-color: @accent;
+    box-shadow: inset 0 1px 3px alpha(black, 0.4),
+                0 0 0 1px alpha(@accent, 0.35);
+}
+
+#input image { color: @accent; margin-right: 4px; }
+
+#input selection {
+    background: alpha(@accent, 0.35);
+    color: @fg;
+}
+
+/* rows: flat, only lightly separated */
+#entry {
+    padding: 4px 8px;
+    margin: 0;
+    min-height: 0;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+#entry:hover {
+    background: alpha(@fg, 0.06);
+    border-color: transparent;
+}
+
+#entry:selected {
+    background: alpha(@accent, 0.20);
+    border-color: alpha(@accent, 0.55);
+    box-shadow: none;
+}
+
+#entry:active {
+    background: alpha(@accent, 0.30);
+    box-shadow: none;
+}
+
+#text {
+    color: @fg_dim;
+    margin-left: 8px;
+}
+
+#entry:selected #text {
+    color: @fg;
+    font-weight: 700;
+}
+
+#img { margin-right: 0; }

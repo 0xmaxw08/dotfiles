@@ -1,6 +1,6 @@
-@define-color bg        #0e1513;
-@define-color fg        #ffffff;
-@define-color accent    #b2ffea;
+@define-color bg        {{colors.surface.dark.hex}};
+@define-color fg        {{colors.on_surface.dark.hex}};
+@define-color accent    {{colors.primary.dark.hex}};
 
 @define-color bg_field  mix(@bg, black, 0.25);
 @define-color border    mix(@bg, @fg, 0.14);

@@ -12,7 +12,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("nm-applet --indicator")
     hl.exec_cmd("blueman-applet")
     hl.exec_cmd("hypridle")
-    hl.exec_cmd("sleep 3 && notify-send 'System' \"$(~/.local/bin/greeting.sh)\"")
+    hl.exec_cmd("sleep 3 && notify-send -t 10000 'suki' \"$(~/.local/bin/greeting.sh)\"")
     hl.exec_cmd("~/.local/bin/greeting-loop.sh")
 end)
 
