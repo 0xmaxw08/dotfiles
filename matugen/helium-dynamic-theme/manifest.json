@@ -4,17 +4,17 @@
   "version": "1.0",
   "theme": {
     "colors": {
-      "frame": "#1b211f",
-      "frame_inactive": "#0e1513",
-      "toolbar": "#0e1513",
+      "frame": "#1a2121",
+      "frame_inactive": "#0e1415",
+      "toolbar": "#0e1415",
       "tab_text": "#ffffff",
       "tab_background_text": "#ffffff",
       "toolbar_text": "#ffffff",
       "bookmark_text": "#ffffff",
-      "ntp_background": "#0e1513",
+      "ntp_background": "#0e1415",
       "ntp_text": "#ffffff",
-      "button_background": "#81d2bd",
-      "accent_color": "#b2ffea"
+      "button_background": "#7cd0d2",
+      "accent_color": "#aefeff"
     }
   }
 }

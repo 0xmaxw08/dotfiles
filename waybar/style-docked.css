@@ -34,7 +34,7 @@ window#waybar {
 #workspaces {
     padding: 3px 8px;
     margin: 3px 1px;
-    background: #2b3230;
+    background: #2b3232;
     border-radius: 8px;
 }
 
@@ -42,11 +42,11 @@ window#waybar {
     padding: 2px 8px;
     margin: 0;
     background: transparent;
-    color: #e8f2ed;
+    color: #e8f2f1;
 }
 
 #custom-ws1.active, #custom-ws2.active, #custom-ws3.active, #custom-ws4.active, #custom-ws5.active {
-    background: #b2ffea;
+    background: #aefeff;
     border-radius: 6px;
     color: #000000;
     font-weight: 700;
@@ -55,7 +55,7 @@ window#waybar {
 #custom-ws-extra {
     padding: 2px 8px;
     margin: 0;
-    background: #b2ffea;
+    background: #aefeff;
     border-radius: 6px;
     color: #000000;
     font-weight: 700;
@@ -64,28 +64,28 @@ window#waybar {
 #window {
     padding: 2px 10px;
     margin: 3px 3px 3px 1px;
-    background: #2b3230;
+    background: #2b3232;
     border-radius: 8px;
-    color: #e8f2ed;
+    color: #e8f2f1;
     font-style: italic;
 }
 
 #mpris {
     padding: 2px 9px;
     margin: 3px;
-    background: #2b3230;
+    background: #2b3232;
     border-radius: 8px;
     color: #ffffff;
 }
 
 #mpris.paused {
-    color: #e8f2ed;
+    color: #e8f2f1;
 }
 
 #clock {
     padding: 2px 11px;
     margin: 3px;
-    background: #2b3230;
+    background: #2b3232;
     border-radius: 8px;
     color: #ffffff;
     font-weight: 700;
@@ -95,13 +95,13 @@ window#waybar {
 #custom-fan, #custom-wallpaper, #pulseaudio, #network, #cpu, #memory, #temperature, #battery {
     padding: 2px 10px;
     margin: 3px 1px;
-    background: #2b3230;
+    background: #2b3232;
     border-radius: 8px;
     color: #ffffff;
 }
 
 #custom-fan:hover, #custom-wallpaper:hover, #pulseaudio:hover, #network:hover, #cpu:hover, #memory:hover, #battery:hover {
-    background: #363d3a;
+    background: #363d3d;
     color: #ffffff;
 }
 
@@ -112,7 +112,7 @@ window#waybar {
 }
 
 #battery.warning:not(.charging) {
-    background: #363d3a;
+    background: #363d3d;
     color: #ffffff;
 }
 
@@ -122,20 +122,20 @@ window#waybar {
 
 #custom-tray-toggle {
     padding: 2px 9px;
-    background: #2b3230;
+    background: #2b3232;
     border-radius: 8px;
-    color: #e8f2ed;
+    color: #e8f2f1;
 }
 
 #custom-tray-toggle:hover {
-    background: #363d3a;
+    background: #363d3d;
     color: #ffffff;
 }
 
 #tray {
     padding: 2px 8px;
     margin-left: 3px;
-    background: #2b3230;
+    background: #2b3232;
     border-radius: 8px;
 }
 
@@ -144,15 +144,15 @@ window#waybar {
 }
 
 #tray menu {
-    background: #2b3230;
-    border: 1px solid #bbc5c0;
+    background: #2b3232;
+    border: 1px solid #bac5c4;
     border-radius: 10px;
     color: #ffffff;
 }
 
 tooltip {
-    background: #0e1513;
-    border: 1px solid #bbc5c0;
+    background: #0e1415;
+    border: 1px solid #bac5c4;
     border-radius: 12px;
     color: #ffffff;
     padding: 12px 16px;
@@ -165,13 +165,13 @@ tooltip label {
 #custom-updates {
     padding: 2px 10px;
     margin: 3px 1px;
-    background: #2b3230;
+    background: #2b3232;
     border-radius: 8px;
     color: #ffffff;
 }
 
 #custom-updates:hover {
-    background: #363d3a;
+    background: #363d3d;
     color: #ffffff;
 }
 
@@ -181,5 +181,5 @@ tooltip label {
 }
 
 #custom-updates.clean {
-    color: #e8f2ed;
+    color: #e8f2f1;
 }
