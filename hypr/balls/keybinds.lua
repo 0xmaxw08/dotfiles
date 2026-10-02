@@ -4,7 +4,7 @@ local Mod = "SUPER"
 local menu = "/home/max/.local/bin/wofi-search"
 local term = "kitty"
 local bar = "waybar"
-local file = "dolphin"
+local file = "nautilus"
 
 -- Binds
 hl.bind(Mod .. " + J", hl.dsp.layout("togglesplit"))
