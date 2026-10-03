@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+
+# Native drun + dmenu
+result=$(
+    wofi \
+        --show drun,dmenu \
+        --prompt="use me, max. i'm yours" \
+        --print_desktop_file
+)
+
+[ -z "$result" ] && exit 0
+
+# If Wofi returned a desktop file, it was an app selection.
+if [[ "$result" == *.desktop* ]]; then
+    desktop_file="${result%% *}"
+
+    gtk-launch "$(basename "$desktop_file" .desktop)" \
+        >/dev/null 2>&1 &
+    exit 0
+fi
+
+# Strip leading "d " marker (dmenu passthrough prefix) before URL check
+raw_input="${result#d }"
+
+# Detect if input looks like a URL/domain
+if [[ "$raw_input" =~ ^https?:// ]]; then
+    url="$raw_input"
+elif [[ "$raw_input" =~ ^[a-zA-Z0-9-]+\.[a-zA-Z]{2,}(/.*)?$ ]]; then
+    url="https://$raw_input"
+elif [[ "$result" == d\ * ]]; then
+    search_terms="${result#d }"
+    encoded_query=$(printf '%s' "$search_terms" | sed 's/ /+/g')
+    url="https://duckduckgo.com/?q=$encoded_query"
+else
+    encoded_query=$(printf '%s' "$result" | sed 's/ /+/g')
+    url="https://www.google.com/search?q=$encoded_query"
+fi
+
+# Open in Helium.
+/opt/helium-browser-bin/helium \
+    --user-data-dir="$HOME/.config/net.imput.helium" \
+    "$url"

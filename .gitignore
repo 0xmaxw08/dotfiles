@@ -9,6 +9,7 @@
 !matugen/
 !mako/
 !kitty/
+!scripts/
 
 !hypr/**
 !waybar/**
@@ -17,6 +18,7 @@
 !matugen/**
 !mako/**
 !/kitty/**
+!scripts/**
 
 **/*.log
 **/cache/
