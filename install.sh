@@ -424,6 +424,23 @@ else
 fi
 
 # --------------------------------------------------
+# Verify that the newer files were linked
+# --------------------------------------------------
+
+info "Verifying links..."
+
+for rel in \
+    hypr/scripts/lock-greeting.sh \
+    hypr/lockscreen/messages.txt \
+    fastfetch/tiny.jsonc \
+    fastfetch/compact.jsonc
+do
+    if [[ -e "$SRC/$rel" && ! -e "$CONFIG_DIR/$rel" ]]; then
+        warning "Not linked: $rel"
+    fi
+done
+
+# --------------------------------------------------
 # Finish
 # --------------------------------------------------
 
