@@ -22,7 +22,7 @@ case "${img,,}" in
         # to the video's first frame, then start mpvpaper on top once it's done
         pkill -x mpvpaper
         if [[ -n "$theme_img" ]]; then
-            awww img "$theme_img" -t outer --transition-duration 1
+            awww img "$theme_img" -t outer --transition-duration 1 --transition-fps 144
             sleep 1
         fi
         setsid -f mpvpaper -o "no-audio loop hwdec=auto" '*' "$img" \
@@ -35,7 +35,7 @@ case "${img,,}" in
         rm -f "$HOME/.cache/maxdots/last-live"
 
         # awww handles GIFs natively and keeps them animated
-        awww img "$img" -t outer --transition-duration 1
+        awww img "$img" -t outer --transition-duration 1 --transition-fps 144
 
         # theme.py wants a still image, so use the first frame for animated formats
         case "${img,,}" in
