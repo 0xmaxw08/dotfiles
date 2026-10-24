@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+
+pick_transition() {
+    local types=(outer center grow wipe wave fade left right top bottom)
+    printf '%s' "${types[RANDOM % ${#types[@]}]}"
+}
 # Replace "outer" with: fade, wipe, grow, outer, wave, center, any, random
 
 img="$1"
@@ -22,7 +27,7 @@ case "${img,,}" in
         # to the video's first frame, then start mpvpaper on top once it's done
         pkill -x mpvpaper
         if [[ -n "$theme_img" ]]; then
-            awww img "$theme_img" -t outer --transition-duration 1 --transition-fps 144
+            awww img "$theme_img" -t "$(pick_transition)" --transition-duration 1 --transition-fps 144
             sleep 1
         fi
         setsid -f mpvpaper -o "no-audio loop hwdec=auto" '*' "$img" \
@@ -35,7 +40,7 @@ case "${img,,}" in
         rm -f "$HOME/.cache/maxdots/last-live"
 
         # awww handles GIFs natively and keeps them animated
-        awww img "$img" -t outer --transition-duration 1 --transition-fps 144
+        awww img "$img" -t "$(pick_transition)" --transition-duration 1 --transition-fps 144
 
         # theme.py wants a still image, so use the first frame for animated formats
         case "${img,,}" in
