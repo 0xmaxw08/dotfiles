@@ -5,7 +5,7 @@
 A simple, lightweight Hyprland setup focused on productivity, practical keybinds, and easy to customize.
 
 ![Hyprland](https://img.shields.io/badge/Hyprland-0.56.2-8b9aaf?style=for-the-badge&labelColor=101418)
-[![Instagram](https://img.shields.io/badge/instagram-mnvndraah-b05a63?style=for-the-badge&logo=instagram&logoColor=ffffff&labelColor=101418)](https://instagram.com/mnvndraah)
+[![Instagram](https://img.shields.io/badge/instagram-mnvndrahh-b05a63?style=for-the-badge&logo=instagram&logoColor=ffffff&labelColor=101418)](https://instagram.com/mnvndrahh)
 [![LinkedIn](https://img.shields.io/badge/linkedin-maxw08-7289a8?style=for-the-badge&labelColor=101418)](https://www.linkedin.com/in/maxw08)
 [![Discord](https://img.shields.io/badge/discord-0xmaxw08-7289a8?style=for-the-badge&logo=discord&logoColor=ffffff&labelColor=101418)](https://github.com/0xmaxw08)
 [![GitHub](https://img.shields.io/badge/github-0xmaxw08-9a6570?style=for-the-badge&logo=github&logoColor=ffffff&labelColor=101418)](https://github.com/0xmaxw08)
