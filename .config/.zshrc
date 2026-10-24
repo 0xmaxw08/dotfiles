@@ -138,3 +138,22 @@ theme() { python3 "$HOME/.config/maxdots/bin/theme.py" "$@"; }
 # --------------------------------------------------
 
 export PATH=$PATH:/home/max/.spicetify
+
+
+# >>> fastfetch start
+if [[ -o interactive && -t 1 ]] && command -v fastfetch >/dev/null; then
+  sleep 0.15                               # let the tiling resize finish
+  _sz=$(stty size </dev/tty 2>/dev/null)   # "rows cols"
+  _l=${_sz% *}; _c=${_sz#* }
+  : ${_l:=$LINES} ${_c:=$COLUMNS}
+
+  if (( _l < 10 || _c < 62 )); then
+    fastfetch -c "$HOME/.config/fastfetch/tiny.jsonc"
+  elif (( _l < 26 || _c < 100 )); then
+    fastfetch -c "$HOME/.config/fastfetch/compact.jsonc"
+  else
+    fastfetch
+  fi
+  unset _sz _l _c
+fi
+# <<< fastfetch end

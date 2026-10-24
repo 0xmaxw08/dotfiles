@@ -56,13 +56,15 @@
     },
     {
       "type": "os",
+      "format": "Arch Linux x86_64",
       "key": " ├─ 󰌽 ",
       "keyColor": "38;5;240"
     },
     {
-      "type": "kernel",
+      "type": "command",
       "key": " ├─  ",
-      "keyColor": "38;5;240"
+      "keyColor": "38;5;240",
+      "text": "uname -r | sed 's/-cachyos.*//'"
     },
     {
       "type": "wm",
