@@ -6,7 +6,7 @@
 -- terminal/browser — those globals are the program names from hyprland.lua).
 local terminal_key      = "Return"
 local launcher_key      = "Space"
-local qa_key         = "S"
+local qa_key            = "S"
 local files_key         = "E"
 local browser_key       = "B"
 local close_key         = "Q"
@@ -159,8 +159,8 @@ bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 bind(mainMod .. " + " .. bar_key, hl.dsp.exec_cmd("qs ipc call bar toggle"))
 bind(mainMod .. " + " .. clipboard_key, hl.dsp.exec_cmd("pgrep -x rofi >/dev/null && pkill -x rofi || cliphist list | rofi -dmenu -p '' | cliphist decode | wl-copy"))
 
-bind(shot_key, hl.dsp.exec_cmd("sh -c 'file=" .. home .. "/Pictures/$(date +%s).png; grim \"$file\"; wl-copy < \"$file\"; qs ipc call screenshot notify \"$file\"'"))
-bind(shot_area_key, hl.dsp.exec_cmd(home .. "/.config/hypr/scripts/screenshot-area.sh"))
+bind("PRINT", hl.dsp.exec_cmd("sh -c 'file=" .. home .. "/Pictures/$(date +%s).png; grim \"$file\"; wl-copy < \"$file\"; qs ipc call screenshot notify \"$file\"'"))
+bind("SHIFT + PRINT", hl.dsp.exec_cmd(home .. "/.config/hypr/scripts/screenshot-area.sh"))
 
 bind(mainMod .. " + " .. layout_key, hl.dsp.exec_cmd("hyprctl switchxkblayout current next"))
 

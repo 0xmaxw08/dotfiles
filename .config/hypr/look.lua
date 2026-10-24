@@ -32,9 +32,9 @@ hl.config({
             vibrancy = 0.2,
         },
         shadow = {
-            enabled = true,
-            range = 4,
-            render_power = 3,
+            enabled = false,
+            range = 0,
+            render_power = 0,
         },
     },
     animations = {

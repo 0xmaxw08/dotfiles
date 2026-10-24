@@ -7,7 +7,7 @@ mainMod    = "SUPER"
 terminal   = "kitty"
 menu       = "rofi -show drun"
 fileManager = "thunar"
-browser    = "brave"
+browser    = "helium-browser"
 
 -- Overrides written by Quickshell (Settings > Configs): mainMod, browser.
 -- Must load before keybinds.lua, which reads these globals when binding.

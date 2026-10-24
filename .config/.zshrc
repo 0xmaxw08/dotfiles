@@ -100,6 +100,7 @@ alias ls='eza --icons=always'
 alias ll='eza -lah --icons=always --git'
 alias la='eza -a --icons=always'
 alias lt='eza --tree --icons=always'
+alias ff="fastfetch"
 
 # --------------------------------------------------
 # Autosuggestions
@@ -136,4 +137,4 @@ theme() { python3 "$HOME/.config/maxdots/bin/theme.py" "$@"; }
 # Startup
 # --------------------------------------------------
 
-fastfetch
+export PATH=$PATH:/home/max/.spicetify
