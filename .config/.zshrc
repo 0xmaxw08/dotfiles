@@ -151,8 +151,8 @@ if [[ -o interactive && -t 1 ]] && command -v fastfetch >/dev/null; then
     fastfetch -c "$HOME/.config/fastfetch/tiny.jsonc"
   elif (( _l < 26 || _c < 100 )); then
     fastfetch -c "$HOME/.config/fastfetch/compact.jsonc"
-  else
-    fastfetch
+#  else
+#    fastfetch
   fi
   unset _sz _l _c
 fi
