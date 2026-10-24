@@ -77,6 +77,8 @@ Item {
         blurVibrancy: 0.2,
         blurLayers: true,        
         blurLayerAlpha: 0.1, 
+        blurOn: true,
+        shadowOn: true,
         shadowRange: 4,
         shadowPower: 3,
         speedWindows: 5,
@@ -178,10 +180,10 @@ Item {
             },
             decoration: {
                 rounding: l.rounding,
-                blur: fxOn
+                blur: fxOn && l.blurOn !== false
                     ? { enabled: true, size: high ? l.blurSize + 4 : l.blurSize, passes: high ? l.blurPasses + 1 : l.blurPasses, vibrancy: l.blurVibrancy }
                     : { enabled: false },
-                shadow: fxOn
+                shadow: fxOn && l.shadowOn !== false
                     ? { enabled: true, range: high ? l.shadowRange + 12 : l.shadowRange, render_power: l.shadowPower }
                     : { enabled: false }
             },
@@ -197,7 +199,7 @@ Item {
         stmts.push(animLine("border",     l.speedBorder,     "default"))
         stmts.push(animLine("fade",       l.speedFade,       "default"))
         stmts.push(animLine("workspaces", l.speedWorkspaces, "default", l.workspaceStyle))
-        const layerBlur = fxOn && l.blurLayers
+        const layerBlur = fxOn && l.blurOn !== false && l.blurLayers
         stmts.push("hl.layer_rule({ name = \"qs\", match = { namespace = \"^(quickshell|settings|notifications|powermenu|powermenu-settings|mediaosd|mediaosd-settings|recorder-osd|todo|wheel|colorpicker|colorpicker-editor)$\" }, blur = "
         + (layerBlur ? "true" : "false")
         + ", blur_popups = " + (layerBlur ? "true" : "false")
@@ -745,6 +747,10 @@ Item {
                         width: parent.width; spacing: 8
 
                         GroupLabel { text: "BLUR" }
+                        ToggleRow {
+                            label: "BLUR ENABLED"; checked: page.look.blurOn !== false
+                            onToggled: v => page.setLook("blurOn", v)
+                        }
 
                         Stepper {
                             label: "SIZE"; value: page.look.blurSize; from: 1; to: 20
@@ -765,6 +771,10 @@ Item {
                         width: parent.width; spacing: 8
 
                         GroupLabel { text: "SHADOW" }
+                        ToggleRow {
+                            label: "SHADOWS ENABLED"; checked: page.look.shadowOn !== false
+                            onToggled: v => page.setLook("shadowOn", v)
+                        }
 
                         Stepper {
                             label: "RANGE"; value: page.look.shadowRange; from: 0; to: 50
