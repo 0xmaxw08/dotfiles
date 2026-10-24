@@ -26,6 +26,7 @@ Item {
     readonly property var browsers: [
         { bin: "brave",                label: "BRAVE",     desktop: "brave-browser.desktop" },
         { bin: "firefox",              label: "FIREFOX",   desktop: "firefox.desktop" },
+        { bin: "helium-browser",       label: "HELIUM",    desktop: "helium.desktop" },
         { bin: "chromium",             label: "CHROMIUM",  desktop: "chromium.desktop" },
         { bin: "google-chrome-stable", label: "CHROME",    desktop: "google-chrome.desktop" },
         { bin: "zen-browser",          label: "ZEN",       desktop: "zen.desktop" },
