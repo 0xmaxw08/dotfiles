@@ -216,7 +216,7 @@ Scope {
             || battery.state === UPowerDeviceState.FullyCharged)
     readonly property bool batLow: battery !== null && !batCharging && batPct <= cfg.batLowPct
     readonly property var batIcons: ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"]
-    readonly property string batIcon: batIcons[batPct >= 90 ? 4 : batPct >= 65 ? 3 : batPct >= 40 ? 2 : batPct >= 15 ? 1 : 0]
+    readonly property string batIcon: batCharging ? "\uf0e7" : batIcons[batPct >= 90 ? 4 : batPct >= 65 ? 3 : batPct >= 40 ? 2 : batPct >= 15 ? 1 : 0]
 
     function fmtTime(sec) {
         const h = Math.floor(sec / 3600), m = Math.floor((sec % 3600) / 60);
@@ -1067,7 +1067,6 @@ Scope {
             glyphSize: root.sz.icon
             glyph: root.batIcon
             warning: root.batLow
-            active: root.batCharging
             tip: root.batTip
         }
     }

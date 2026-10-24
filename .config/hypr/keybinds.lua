@@ -4,8 +4,8 @@
 
 -- Defaults. Overrides come from state/binds.lua as kb_* (never reuse
 -- terminal/browser — those globals are the program names from hyprland.lua).
-local terminal_key      = "T"
-local launcher_key      = "D"
+local terminal_key      = "Return"
+local launcher_key      = "Space"
 local qa_key         = "S"
 local files_key         = "E"
 local browser_key       = "B"
@@ -23,9 +23,9 @@ local todo_key          = "C"
 local bar_key           = "SHIFT + W"
 local clipboard_key     = "V"
 local layout_key        = "X"
-local float_key         = "Space"
+local float_key         = "D"
 local record_key        = "R"
-local shot_key          = "Delete"
+local shot_key          = "PRINT"
 local shot_area_key     = "SHIFT + Delete"
 
 do
