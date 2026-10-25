@@ -25,28 +25,19 @@ setopt HIST_REDUCE_BLANKS
 # Live autocompletion (must come before anything that calls compinit)
 # --------------------------------------------------
 
-if [[ -r /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh ]]; then
-  # settings go BEFORE sourcing so the plugin reads them on load
-  zstyle ':autocomplete:*' min-input 0              # show suggestions on an empty word too
-  zstyle ':autocomplete:*' delay 0.05               # small delay so typing stays smooth
-  zstyle ':autocomplete:*' list-lines 12            # max rows in the live menu
-  zstyle ':autocomplete:*' insert-unambiguous yes   # Tab first fills the common prefix
+autoload -Uz compinit && compinit
 
-  source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+setopt AUTO_LIST LIST_AMBIGUOUS AUTO_MENU COMPLETE_IN_WORD
+unsetopt MENU_COMPLETE
 
-  # Tab / Shift+Tab step through the live menu
-  bindkey '^I' menu-complete
-  bindkey "$terminfo[kcbt]" reverse-menu-complete
-else
-  autoload -Uz compinit && compinit
-  zstyle ':completion:*' menu select
-fi
+zstyle ':completion:*' menu select
+zstyle ':completion:*' special-dirs true
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
-# Up/Down: normal history navigation
-bindkey '^[[A' up-line-or-history
+bindkey '^I' expand-or-complete
+bindkey "$terminfo[kcbt]" reverse-menu-complete
 bindkey '^[[B' down-line-or-history
-bindkey "$terminfo[kcuu1]" up-line-or-history
-bindkey "$terminfo[kcud1]" down-line-or-history
 
 # --------------------------------------------------
 # Completion styling
