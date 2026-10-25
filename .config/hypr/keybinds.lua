@@ -142,7 +142,7 @@ bind(mainMod .. " + " .. qa_key,         hl.dsp.exec_cmd("qs ipc call qa toggle"
 bind(mainMod .. " + " .. files_key,         hl.dsp.exec_cmd(fileManager))
 bind(mainMod .. " + " .. browser_key,       hl.dsp.exec_cmd(browser))
 bind(mainMod .. " + " .. close_key,         hl.dsp.window.close())
-bind(mainMod .. " + " .. lock_key,          hl.dsp.exec_cmd("hyprlock"))
+bind(mainMod .. " + " .. lock_key,          hl.dsp.exec_cmd(home .. "/.config/hypr/scripts/lock.sh"))
 bind(mainMod .. " + " .. power_key,         hl.dsp.exec_cmd("qs ipc call powermenu toggle"))
 bind(mainMod .. " + " .. settings_key,      hl.dsp.exec_cmd("qs ipc call settings toggle"))
 bind(mainMod .. " + " .. wallpapers_key,    hl.dsp.exec_cmd("qs -n -p ~/.config/quickshell/hyprquickpaper"))
@@ -159,7 +159,7 @@ bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 bind(mainMod .. " + " .. bar_key, hl.dsp.exec_cmd("qs ipc call bar toggle"))
 bind(mainMod .. " + " .. clipboard_key, hl.dsp.exec_cmd("pgrep -x rofi >/dev/null && pkill -x rofi || cliphist list | rofi -dmenu -p '' | cliphist decode | wl-copy"))
 
-bind("PRINT", hl.dsp.exec_cmd("sh -c 'file=" .. home .. "/Pictures/$(date +%s).png; grim \"$file\"; wl-copy < \"$file\"; qs ipc call screenshot notify \"$file\"'"))
+bind("PRINT", hl.dsp.exec_cmd("sh -c 'file=" .. home .. "/Pictures/Screenshots/$(date +%s).png; grim \"$file\"; wl-copy < \"$file\"; qs ipc call screenshot notify \"$file\"'"))
 bind("SHIFT + PRINT", hl.dsp.exec_cmd(home .. "/.config/hypr/scripts/screenshot-area.sh"))
 
 bind(mainMod .. " + " .. layout_key, hl.dsp.exec_cmd("hyprctl switchxkblayout current next"))

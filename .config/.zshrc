@@ -26,18 +26,18 @@ setopt HIST_REDUCE_BLANKS
 # --------------------------------------------------
 
 if [[ -r /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh ]]; then
+  # settings go BEFORE sourcing so the plugin reads them on load
+  zstyle ':autocomplete:*' min-input 0              # show suggestions on an empty word too
+  zstyle ':autocomplete:*' delay 0.05               # small delay so typing stays smooth
+  zstyle ':autocomplete:*' list-lines 12            # max rows in the live menu
+  zstyle ':autocomplete:*' insert-unambiguous yes   # Tab first fills the common prefix
+
   source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
-  zstyle ':autocomplete:*' min-input 1
-  zstyle ':autocomplete:*' delay 0.05
-
-  # Tab opens the menu; Tab / Shift+Tab move through it
-  bindkey '^I' menu-select
-  bindkey "$terminfo[kcbt]" menu-select
-  bindkey -M menuselect '^I' menu-complete
-  bindkey -M menuselect "$terminfo[kcbt]" reverse-menu-complete
+  # Tab / Shift+Tab step through the live menu
+  bindkey '^I' menu-complete
+  bindkey "$terminfo[kcbt]" reverse-menu-complete
 else
-  # Fallback so Tab still lists directory contents without the plugin
   autoload -Uz compinit && compinit
   zstyle ':completion:*' menu select
 fi
@@ -140,20 +140,20 @@ theme() { python3 "$HOME/.config/maxdots/bin/theme.py" "$@"; }
 export PATH=$PATH:/home/max/.spicetify
 
 
-# >>> fastfetch start
-if [[ -o interactive && -t 1 ]] && command -v fastfetch >/dev/null; then
-  sleep 0.15                               # let the tiling resize finish
-  _sz=$(stty size </dev/tty 2>/dev/null)   # "rows cols"
-  _l=${_sz% *}; _c=${_sz#* }
-  : ${_l:=$LINES} ${_c:=$COLUMNS}
 
-  if (( _l < 10 || _c < 62 )); then
-    fastfetch -c "$HOME/.config/fastfetch/tiny.jsonc"
-  elif (( _l < 26 || _c < 100 )); then
-    fastfetch -c "$HOME/.config/fastfetch/compact.jsonc"
-#  else
-#    fastfetch
+# fastfetch that adapts to the current terminal size
+fastfetch() {
+  local rows cols
+  read -r rows cols < <(stty size </dev/tty 2>/dev/null)
+  : ${rows:=$LINES} ${cols:=$COLUMNS}
+
+  if [[ $# -gt 0 ]]; then
+    command fastfetch "$@"                                   # explicit flags win
+  elif (( rows < 10 || cols < 62 )); then
+    command fastfetch -c "$HOME/.config/fastfetch/tiny.jsonc"
+  elif (( rows < 26 || cols < 100 )); then
+    command fastfetch -c "$HOME/.config/fastfetch/compact.jsonc"
+  else
+    command fastfetch
   fi
-  unset _sz _l _c
-fi
-# <<< fastfetch end
+}
