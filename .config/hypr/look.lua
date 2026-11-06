@@ -34,7 +34,7 @@ hl.config({
         shadow = {
             enabled = false,
             range = 0,
-            render_power = 0,
+            render_power = 1,
         },
     },
     animations = {
